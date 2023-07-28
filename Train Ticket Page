@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ticket Booking</title>
+  <style>
+  
+
+    h1 {
+      text-align: center;
+    }
+    form select{
+      width: 25%;
+      padding: 10px;
+    }
+ 
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 40px;
+      border: 2px solid ;
+    }
+
+    table th {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ticket Booking</h1>
+
+  <form>
+    <label for="From">From:</label>
+    <select id="From" name="From">
+      <option value="">Select</option>
+      <option value="Vijayawada">Vijayawada</option>
+      <option value="Vizag">Vizag</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Mylavaram">Mylavaram</option>
+      <option value="Madhurawada">Madhurawada</option>
+    </select>
+
+    <label for="To">To:</label>
+    <select id="To" name="To">
+      <option value="">Select</option>
+      <option value="Vijayawada">Vijayawada</option>
+      <option value="Vizag">Vizag</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Mylavaram">Mylavaram</option>
+      <option value="Madhurawada">Madhurawada</option>
+    </select>
+	<br>
+    <br>
+    <label for="Train">Train:</label>
+    <select id="Train" name="Train">
+      <option value="">Select</option>
+      <option value="V1">V2</option>
+      <option value="V2">V2</option>
+      <option value="H1">H1</option>
+      <option value="M2">M2</option>
+      <option value="M1">M1</option>
+    </select>
+	<br>
+    <br>
+    <label for="Class">Class:</label>
+    <select id="Class" name="Class">
+      <option value="">Select</option>
+      <option value="3A">3A</option>
+      <option value="2A">2A</option>
+      <option value="1A">1A</option>
+      <option value="SL">SL</option>
+      <option value="GL">GL</option>
+    </select>
+
+    <label for="Date">Date:</label>
+    <input type="date" id="Date" name="Date">
+
+    <table>
+      <tr>
+        <th>Sno</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><input type="text"></td>
+        <td>
+          <select id="Gender" name="Gender" >
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </td>
+        <td><input type="text"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

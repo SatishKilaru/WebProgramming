@@ -46,7 +46,7 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
 <body >
   <form>
   <div class="container-fluid">
-  	 <h1 style="text-decoration: underline;">Ticket Booking</h1>
+  	 <h1 style="text-decoration: underline;"><b>Ticket Booking</b></h1>
 	<br>
     <div class="row">
      <div class="col-sm-6">
@@ -85,6 +85,8 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
     </select>
 	<br>
     <br>
+     <div class="row">
+     <div class="col-sm-6">
     <label for="Class">Class:</label>
     <select id="Class" name="Class">
       <option value="">Select</option>
@@ -94,11 +96,12 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
       <option value="SL">SL</option>
       <option value="GL">GL</option>
     </select>
-	<br>
-    <br>
+	   </div><div class="col-sm-6">
     <label for="Date" >Date:</label>
     <input type="date" id="Date" name="Date" >
-  
+  </div>  </div>
+  <div class="row">
+     <div class="col-sm-12">
 	<div class="table-container">
     <table align-text=center>
       <tr>
@@ -132,12 +135,13 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
         <td><input type="number" max=100 min=1></td>
       </tr>
     </table>
-       </div>
-    <br>
-    <br>
-    <button style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button style="cursor: pointer;height:40px; width:120px;background-color:blue;color:white;text-align:center; ">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button type="reset" style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Clear</button>
+    </div>  </div>
+       </div><br><br>
+    <div class="row">
+     <div class="col-sm-4">
+    <button style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Add</button> </div>
+    <div class="col-sm-4"><button style="cursor: pointer;height:40px; width:120px;background-color:blue;color:white;text-align:center; ">Submit</button></div>
+       <div class="col-sm-4">  <button type="reset" style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Clear</button></div></div>
    </div>
    </form>
 </body>

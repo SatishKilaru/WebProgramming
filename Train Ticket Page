@@ -12,7 +12,7 @@
     border: 1px solid ;
     padding: 5px;
     border-radius: 5px;
-     width: 160px;
+     width: 200px;height:30px;
 }
 form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-bottom:5%;padding-top:10px;padding-bottom:40px;}
  body{
@@ -27,12 +27,12 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
     }
  	.table-container {
     display: flex;
-    justify-content: center;
+    justify-content: center;width:90%;margin-left:5%;
  	}
     table {
       border-collapse: collapse;
       width: 90%;
-      margin-top: 40px;
+      margin-top: 20px;
       border: 2px solid ;
     }
 
@@ -44,7 +44,7 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
   </style>
 </head>
 <body >
-  <form>
+  <form onsubmit="return validateForm()">
   <div class="container-fluid">
   	 <h1 style="text-decoration: underline;"><b>Ticket Booking</b></h1>
 	<br>
@@ -73,7 +73,8 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
      </div>
      </div>
 	<br>
-    <br>
+	<div class="row">
+     <div class="col-sm-12">
     <label for="Train">Train:</label>
     <select id="Train" name="Train">
       <option value="">Select</option>
@@ -83,7 +84,8 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
       <option value="M2">M2</option>
       <option value="M1">M1</option>
     </select>
-	<br>
+	</div>
+     </div>
     <br>
      <div class="row">
      <div class="col-sm-6">
@@ -100,50 +102,74 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
     <label for="Date" >Date:</label>
     <input type="date" id="Date" name="Date" >
   </div>  </div>
-  <div class="row">
-     <div class="col-sm-12">
+	<h2><b>Passengers</b></h2>
 	<div class="table-container">
-    <table align-text=center>
+    <table class="table table-bordered text-center" style=" border: 2px solid ;">
+    <thead>
       <tr>
         <th>Sno</th>
         <th>Name</th>
         <th>Gender</th>
         <th>Age</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>1</td>
-        <td ><input type="text" style="height:20px;width:160px"></td>
+        <td><input type="text" id="name1" class="form-control" style="height:30px;width:100%"></td>
         <td>
-          <select id="Gender" name="Gender" style=" width:40%">
+          <select id="Gender" name="Gender" class="form-control" style="width:100%">
             <option value="">Select</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
         </td>
-        <td><input type="number" max=100 min=1></td>
+        <td><input type="number" id="age1" class="form-control" max="100" min="1"></td>
       </tr>
-       <tr>
+      <tr>
         <td>2</td>
-        <td><input type="text" style="height:20px;width:160px"></td>
+        <td><input type="text" id="name2" class="form-control" style="height:30px;width:100%"></td>
         <td>
-          <select id="Gender" name="Gender" style=" width:40%">
+          <select id="Gender" name="Gender" class="form-control" style="width:100%">
             <option value="">Select</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
           </select>
         </td>
-        <td><input type="number" max=100 min=1></td>
+        <td><input type="number" id="age2" class="form-control" max="100" min="1"></td>
       </tr>
-    </table>
-    </div>  </div>
+    </tbody>
+  </table>
        </div><br><br>
     <div class="row">
      <div class="col-sm-4">
-    <button style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Add</button> </div>
-    <div class="col-sm-4"><button style="cursor: pointer;height:40px; width:120px;background-color:blue;color:white;text-align:center; ">Submit</button></div>
-       <div class="col-sm-4">  <button type="reset" style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Clear</button></div></div>
+    <button class="btn btn-primary" style="cursor: pointer;height:30px; width:100px;text-align:center; ">Add</button> </div>
+    <div class="col-sm-4"><button  class="btn btn-success" style="cursor: pointer;height:40px; width:120px;text-align:center; ">Submit</button></div>
+       <div class="col-sm-4">  <button class="btn btn-warning" type="reset" style="cursor: pointer;height:30px; width:100px;text-align:center; ">Clear</button></div></div>
    </div>
+	<script>
+      function validateForm() {
+        var name1 = document.getElementById("name1").value.trim();
+        var name2 = document.getElementById("name2").value.trim();
+        if (name1 === "" || name2 === "") {
+          alert("Please enter names for all passengers.");
+          return false; 
+        }
+        var nameRegex = /^[A-Za-z]+$/;
+        if (!nameRegex.test(name1) || !nameRegex.test(name2)) {
+          alert("Names can only contain letters (A-Z or a-z).");
+          return false; 
+        }var age1 = parseInt(document.getElementById("age1").value);
+        var age2 = parseInt(document.getElementById("age2").value);
+        if (isNaN(age1) || isNaN(age2) || age1 < 1 || age1 > 100 || age2 < 1 || age2 > 100) {
+          alert("Age should be a number between 1 and 100 for all passengers.");
+          return false;
+        }
+        return true;
+      }
+    </script>
    </form>
+	
 </body>
  
 </html>

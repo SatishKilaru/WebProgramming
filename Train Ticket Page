@@ -2,6 +2,11 @@
 <html >
 <head>
   <title>Ticket Booking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
   select, input[type="date"]{
     border: 1px solid ;
@@ -40,10 +45,13 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
 </head>
 <body >
   <form>
+  <div class="container-fluid">
   	 <h1 style="text-decoration: underline;">Ticket Booking</h1>
 	<br>
+    <div class="row">
+     <div class="col-sm-6">
      <label for="From">From:</label>
-    <input type="text" list="fromOptions" style="width: 160px;height:20px;border-radius: 5px;">
+    <input type="text" list="fromOptions" style="width: 160px;height:30px;border-radius: 5px;">
     <datalist id="fromOptions">
         <option value="Vijayawada">
         <option value="Vizag">
@@ -51,10 +59,10 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
         <option value="Mylavaram">
         <option value="Madhurawada">
     </datalist>
-	<br>
-    <br>
+	 </div>
+      <div class="col-sm-6">
     <label for="To">To:</label>
-    <input type="text" list="toOptions" style="width: 160px;height:20px;border-radius: 5px;">
+    <input type="text" list="toOptions" style="width: 160px;height:30px;border-radius: 5px;">
     <datalist id="toOptions">
         <option value="Vijayawada">
         <option value="Vizag">
@@ -62,6 +70,8 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
         <option value="Mylavaram">
         <option value="Madhurawada">
     </datalist>
+     </div>
+     </div>
 	<br>
     <br>
     <label for="Train">Train:</label>
@@ -128,7 +138,8 @@ form{width:80%;background-color:lightblue;margin-left:10%;margin-top:5%;margin-b
     <button style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Add</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button style="cursor: pointer;height:40px; width:120px;background-color:blue;color:white;text-align:center; ">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button type="reset" style="cursor: pointer;height:30px; width:100px;background-color:blue;color:white;text-align:center; ">Clear</button>
-  </form>
+   </div>
+   </form>
 </body>
  
 </html>

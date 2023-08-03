@@ -1,0 +1,41 @@
+HTML:-
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+  <h1>
+    Write, edit and run HTML and JavaScript code online.
+  </h1>
+  <p id="p">
+    Our HTML editor updates the webview automatically in real-time as you write code.
+  </p>
+  <button onclick="getdata()">Click here</button>
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+javascript:-
+
+function getdata() {
+  const xhttp = new XMLHttpRequest();
+     xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      const x=JSON.parse(this.responseText);
+      
+      document.getElementById("p").innerHTML =
+     x.total;
+    }
+  };
+  xhttp.open("GET", "https://reqres.in/api/users?page=2",true);
+  xhttp.send();
+}

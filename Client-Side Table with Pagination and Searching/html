@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client-Side Table with Pagination and Searching</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Client-Side Table with Pagination and Searching</h1>
+    <input type="text" id="searchInput" placeholder="Search...">
+  <button id="searchButton">Search</button><br><br>
+    <table id="table" style="text-align: center;">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <!-- Table data will be dynamically added here -->
+        </tbody>
+    </table>
+    <div id="pagination"></div>
+   
+    <script src="script.js"></script>
+</body>
+</html>

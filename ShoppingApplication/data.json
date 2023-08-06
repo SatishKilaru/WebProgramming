@@ -1,0 +1,292 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Smartphone",
+      "brand": "Samsung",
+      "price": 500,
+      "category": "Electronics",
+      "image": "https://example.com/images/smartphone.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Laptop",
+      "brand": "HP",
+      "price": 800,
+      "category": "Electronics",
+      "image": "https://example.com/images/laptop.jpg"
+    },
+    {
+      "id": 3,
+      "name": "T-Shirt",
+      "brand": "Nike",
+      "price": 25,
+      "category": "Clothing",
+      "image": "https://example.com/images/tshirt.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Jeans",
+      "brand": "Levi's",
+      "price": 50,
+      "category": "Clothing",
+      "image": "https://example.com/images/jeans.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Running Shoes",
+      "brand": "Adidas",
+      "price": 80,
+      "category": "Footwear",
+      "image": "https://example.com/images/runningshoes.jpg"
+    },
+    {
+  "id": 6,
+  "name": "Gaming Mouse",
+  "brand": "Logitech",
+  "price": 50,
+  "category": "Electronics",
+  "image": "https://example.com/images/gamingmouse.jpg"
+  },
+   {
+      "id": 7,
+      "name": "Coffee Maker",
+      "brand": "Keurig",
+      "price": 150,
+      "category": "Kitchen Appliances",
+      "image": "https://example.com/images/coffeemaker.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Men's Watch",
+      "brand": "Casio",
+      "price": 60,
+      "category": "Fashion",
+      "image": "https://example.com/images/menswatch.jpg"
+    },
+    {
+      "id": 9,
+      "name": "External Hard Drive",
+      "brand": "Western Digital",
+      "price": 120,
+      "category": "Electronics",
+      "image": "https://example.com/images/externalharddrive.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Wireless Router",
+      "brand": "TP-Link",
+      "price": 70,
+      "category": "Electronics",
+      "image": "https://example.com/images/wirelessrouter.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Wireless Headphones",
+      "brand": "Bose",
+      "price": 200,
+      "category": "Electronics",
+      "image": "https://example.com/images/wirelessheadphones.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Digital Camera",
+      "brand": "Canon",
+      "price": 450,
+      "category": "Electronics",
+      "image": "https://example.com/images/digitalcamera.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Vacuum Cleaner",
+      "brand": "Dyson",
+      "price": 350,
+      "category": "Home Appliances",
+      "image": "https://example.com/images/vacuumcleaner.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Sneakers",
+      "brand": "Nike",
+      "price": 120,
+      "category": "Fashion",
+      "image": "https://example.com/images/sneakers.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Wireless Keyboard",
+      "brand": "Logitech",
+      "price": 80,
+      "category": "Electronics",
+      "image": "https://example.com/images/wirelesskeyboard.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Smart TV",
+      "brand": "Samsung",
+      "price": 800,
+      "category": "Electronics",
+      "image": "https://example.com/images/smarttv.jpg"
+    },
+    {
+    "id": 17,
+    "name": "Wireless Mouse",
+    "brand": "Microsoft",
+    "price": 25,
+    "category": "Electronics",
+    "image": "https://example.com/images/wirelessmouse.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Electric Kettle",
+    "brand": "Hamilton Beach",
+    "price": 40,
+    "category": "Kitchen Appliances",
+    "image": "https://example.com/images/electrickettle.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Smartwatch",
+    "brand": "Apple",
+    "price": 350,
+    "category": "Electronics",
+    "image": "https://example.com/images/smartwatch.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Gaming Keyboard",
+    "brand": "Razer",
+    "price": 120,
+    "category": "Electronics",
+    "image": "https://example.com/images/gamingkeyboard.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Handheld Vacuum",
+    "brand": "Black+Decker",
+    "price": 60,
+    "category": "Home Appliances",
+    "image": "https://example.com/images/handheldvacuum.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Bluetooth Earphones",
+    "brand": "Sony",
+    "price": 90,
+    "category": "Electronics",
+    "image": "https://example.com/images/bluetoothearphones.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Refrigerator",
+    "brand": "LG",
+    "price": 800,
+    "category": "Appliances",
+    "image": "https://example.com/images/refrigerator.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Leather Wallet",
+    "brand": "Tommy Hilfiger",
+    "price": 50,
+    "category": "Fashion",
+    "image": "https://example.com/images/leatherwallet.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Power Bank",
+    "brand": "Anker",
+    "price": 30,
+    "category": "Electronics",
+    "image": "https://example.com/images/powerbank.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Desk Lamp",
+    "brand": "Ikea",
+    "price": 20,
+      "category": "Home & Living",
+    "image": "https://example.com/images/desklamp.jpg"
+  },
+     {
+        "id": 27,
+        "name": "Smartphone",
+        "brand": "Samsung",
+        "price": 700,
+        "category": "Electronics",
+        "image": "https://example.com/images/smartphone.jpg"
+    },
+    {
+        "id": 28,
+        "name": "Wireless Headphones",
+        "brand": "Sony",
+        "price": 150,
+        "category": "Electronics",
+        "image": "https://example.com/images/headphones.jpg"
+    },
+    {
+        "id": 29,
+        "name": "Leather Jacket",
+        "brand": "Zara",
+        "price": 250,
+        "category": "Clothing",
+        "image": "https://example.com/images/leatherjacket.jpg"
+    },
+    {
+        "id": 30,
+        "name": "Running Shoes",
+        "brand": "Adidas",
+        "price": 120,
+        "category": "Footwear",
+        "image": "https://example.com/images/runningshoes.jpg"
+    },
+    {
+        "id": 31,
+        "name": "Coffee Maker",
+        "brand": "Breville",
+        "price": 180,
+        "category": "Kitchen Appliances",
+        "image": "https://example.com/images/coffeemaker.jpg"
+    },
+    {
+        "id": 32,
+        "name": "Cotton Bed Sheets",
+        "brand": "Brooklinen",
+        "price": 80,
+        "category": "Home & Living",
+        "image": "https://example.com/images/bedsheets.jpg"
+    },
+    {
+        "id": 33,
+        "name": "Wireless Earbuds",
+        "brand": "Apple",
+        "price": 200,
+        "category": "Electronics",
+        "image": "https://example.com/images/earbuds.jpg"
+    },
+    {
+        "id": 34,
+        "name": "Printed T-Shirt",
+        "brand": "H&M",
+        "price": 25,
+        "category": "Clothing",
+        "image": "https://example.com/images/tshirt.jpg"
+    },
+    {
+        "id": 35,
+        "name": "Blender",
+        "brand": "KitchenAid",
+        "price": 130,
+        "category": "Kitchen Appliances",
+        "image": "https://example.com/images/blender.jpg"
+    },
+    {
+        "id": 36,
+        "name": "Backpack",
+        "brand": "North Face",
+        "price": 90,
+        "category": "Fashion",
+        "image": "https://example.com/images/backpack.jpg"
+    }
+  ]
+}

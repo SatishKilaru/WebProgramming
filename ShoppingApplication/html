@@ -1,0 +1,46 @@
+<html>
+
+<head>
+  <title> Shopping cart using Json data </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1 style="text-align:center;">Satish's Shopping Application</h1>
+  <input type="text" id="searchInput" placeholder="Search for Item..."
+    style="text-align: center; margin-left: 40%; height: 40px; width: 250px; background-color: #f2f2f2; border: 1px solid #ccc; border-radius: 5px; font-size: 16px; color: #333; padding: 5px 10px;"><br>
+
+  <button id="home" style="margin-left:20%;height:40px;width:130px; background-color: green;
+  color: white;">Home</button>
+
+
+  <button id="cart" class="home">Cart</button><br>
+  <div style="display: flex; align-items: center;margin-left:40%">
+    <select id="categoryFilter"
+      style="height: 30px; width: 140px;text-align: center; background-color: lightskyblue; color: black; margin-right: 10px;">
+      <option value="">Filter by category..</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Footwear">Footwear</option>
+      <option value="Fashion">Fashion</option>
+      <option value="Kitchen Appliances">Kitchen Appliances</option>
+      <option value="Appliances">Appliances</option>
+      <option value="Home & Living">Home & Living</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <select id="sortProducts"
+      style="height: 30px; width: 120px;text-align:center; background-color: lightskyblue; color: black;">
+      <option value="">Sort by price..</option>
+      <option value="lowToHigh">Price: Low to High</option>
+      <option value="highToLow">Price: High to Low</option>
+    </select>
+  </div>
+
+  <div id="product-list"></div>
+  <div id="cart-list"></div>
+  <div class="pagination" id="pagination"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST Request Example</title>
+</head>
+<body>
+    <h1>POST Request Example</h1>
+    
+    <form id="postForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required><br>
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" required></textarea><br>
+        <button type="button" id="submitBtn">Submit</button>
+    </form>
+
+    <div id="response"></div>
+
+    <script>
+        const submitBtn = document.getElementById('submitBtn');
+        const responseDiv = document.getElementById('response');
+        const postForm = document.getElementById('postForm');
+
+        submitBtn.addEventListener('click', () => {
+            const formData = new FormData(postForm);
+            const postData = {};
+            formData.forEach((value, key) => {
+                postData[key] = value;
+            });
+
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'https://jsonplaceholder.typicode.com/posts', true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 201) {
+                        const responseData = JSON.parse(
+                        xhr.responseText);
+                        responseDiv.textContent =  JSON.stringify(responseData);
+                    } else {
+                        responseDiv.textContent = 'Error: ' + xhr.statusText;
+                    }
+                }
+            };
+            xhr.send(JSON.stringify(postData));
+        });
+    </script>
+</body>
+</html>

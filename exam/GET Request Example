@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Request Example</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>GET Request Example</h1>
+    
+    <button type="button" id="getDataBtn">Get Data</button>
+    <div id="tableContainer"></div>
+
+    <script>
+        const getDataBtn = document.getElementById('getDataBtn');
+        const tableContainer = document.getElementById('tableContainer');
+
+        getDataBtn.addEventListener('click', () => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        const responseData = JSON.parse(xhr.responseText);
+                        displayDataInTable(responseData);
+                    } else {
+                        tableContainer.textContent = 'Error: ' + xhr.statusText;
+                    }
+                }
+            };
+            xhr.send();
+        });
+
+        function displayDataInTable(data) {
+            const table = document.createElement('table');
+
+            // Create table header
+            const headerRow = document.createElement('tr');
+            for (const key in data[0]) {
+                const headerCell = document.createElement('th');
+                headerCell.textContent = key;
+                headerRow.appendChild(headerCell);
+            }
+            table.appendChild(headerRow);
+
+            // Create table rows
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                for (const key in item) {
+                    const cell = document.createElement('td');
+                    cell.textContent = item[key];
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            });
+
+            tableContainer.innerHTML = '';
+            tableContainer.appendChild(table);
+        }
+    </script>
+</body>
+</html>

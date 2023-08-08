@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body style="text-align:center;">
+    <h1>JSON to Table</h1>
+    <div id="tableContainer" style="width:80%;margin-left:10%;"></div>
+
+    <script>
+        const jsonData = [
+            {
+                "name": "Alice",
+                "age": 25,
+                "city": "New York"
+            },
+            {
+                "name": "Bob",
+                "age": 30,
+                "city": "San Francisco"
+            },
+            {
+                "name": "Eve",
+                "age": 28,
+                "city": "Los Angeles"
+            }
+        ];
+
+        function displayJsonAsTable(data){
+            const tableContainer = document.getElementById('tableContainer');
+            const table = document.createElement('table');
+
+            // Create table header
+            const headerRow = document.createElement('tr');
+            for (const key in data[0]) {
+                const headerCell = document.createElement('th');
+                headerCell.textContent = key;
+                headerRow.appendChild(headerCell);
+            }
+            table.appendChild(headerRow);
+
+            // Create table rows````````````````````````````````````````````````````````````````````````````````````````
+            data.forEach(item => {
+                const row = document.createElement('tr');
+                for (const key in item) {
+                    const cell = document.createElement('td');
+                    cell.textContent = item[key];
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            });
+
+            tableContainer.appendChild(table);
+        };
+
+        displayJsonAsTable(jsonData);
+    </script>
+</body>
+</html>

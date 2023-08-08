@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Functionality Example</title>
+</head>
+<body>
+    <h1>Browser Functionality Example</h1>
+
+    <a href="#" id="goBack">Go Back</a>
+    <a href="#" id="goForward">Go Forward</a>
+    <a href="https://www.example.com" id="redirect">Redirect</a>
+    <a href="#" id="history">History Length</a>
+    <a href="#" id="reload">Reload</a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const goBackLink = document.getElementById('goBack');
+            const goForwardLink = document.getElementById('goForward');
+            const historyLink = document.getElementById('history');
+            const reloadLink = document.getElementById('reload');
+
+            goBackLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                history.back();
+            });
+
+            goForwardLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                history.forward();
+            });
+
+            historyLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                alert(`History length: ${history.length}`);
+            });
+
+            reloadLink.addEventListener('click', (event) => {
+                event.preventDefault();
+                location.reload();
+            });
+        });
+    </script>
+</body>
+</html>
